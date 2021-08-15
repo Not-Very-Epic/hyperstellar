@@ -6,7 +6,7 @@ Hyperstellar is a TypeScript and JavaScript library that allows for building sta
 
 First of all, just like any other npm project, you will need to run `npm install`.
 
-`npm run build` should generate build files in `build/`. `npm run test` should run some basic tests using Jest.
+`npm run build` should generate build files in `build/`. `npm run test` should run some basic tests using [Jest][jest].
 
 ## Goals
 
@@ -22,6 +22,7 @@ First of all, just like any other npm project, you will need to run `npm install
 
 ### Not yet implemented
 
+- Planet oceans
 - Multiple star systems
 - Star and planet rotation
 - Comets, asteroids, and asteroid belts
@@ -40,6 +41,7 @@ It would be extremely helpful if people could contribute and make this repositor
 
 - Khalil Stemmler for his [absolutely amazing repository template][sts]
 
+[jest]: https://jestjs.io
 [eslint]: https://eslint.org
 [prettier]: https://prettier.io
 [husky]: https://typicode.github.io/husky
