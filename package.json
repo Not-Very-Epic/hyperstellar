@@ -22,10 +22,11 @@
     }
   },
   "keywords": [
+    "library",
+    "planets",
     "space",
     "stars",
-    "planets",
-    "library"
+    "typescript"
   ],
   "author": "Not-Very-Epic",
   "license": "LGPL-3.0",
