@@ -7,8 +7,8 @@ class SimpleCelestialBody {
 
 	/**
 	 * It is recommended to use the builder class instead of the constructor.
-	 * @param name Name of the object
-	 * @param discDate Discovery date of the object
+	 * @param name Name of the body
+	 * @param discDate Discovery date of the body
 	 */
 	constructor(name: string, discDate: Date) {
 		this.#name = name
@@ -16,14 +16,14 @@ class SimpleCelestialBody {
 	}
 
 	/**
-	 * Name of the object.
+	 * Name of the body.
 	 */
 	get name(): string {
 		return this.#name
 	}
 
 	/**
-	 * Discovery date of the object.
+	 * Discovery date of the body.
 	 */
 	get discDate(): Date {
 		return this.#discDate
@@ -39,10 +39,10 @@ class CelestialBody extends SimpleCelestialBody {
 
 	/**
 	 * It is recommended to use the builder class instead of the constructor.
-	 * @param name Name of the object
-	 * @param discDate Discovery date of the object
-	 * @param mass Mass of the object in kilograms
-	 * @param radius Radius of the object in kilometers
+	 * @param name Name of the body
+	 * @param discDate Discovery date of the body
+	 * @param mass Mass of the body in kilograms
+	 * @param radius Radius of the body in kilometers
 	 */
 	constructor(name: string, discDate: Date, mass: number, radius: number) {
 		super(name, discDate)
@@ -52,21 +52,21 @@ class CelestialBody extends SimpleCelestialBody {
 	}
 
 	/**
-	 * Mass of the object in kilograms.
+	 * Mass of the body in kilograms.
 	 */
 	get mass(): number {
 		return this.#mass
 	}
 
 	/**
-	 * Radius of the object in kilometers.
+	 * Radius of the body in kilometers.
 	 */
 	get radius(): number {
 		return this.#radius
 	}
 
 	/**
-	 * Volume of the object in cubic kilometers.
+	 * Volume of the body in cubic kilometers.
 	 * Calculated from the radius and assumes a perfect sphere.
 	 */
 	get volume(): number {
@@ -74,7 +74,7 @@ class CelestialBody extends SimpleCelestialBody {
 	}
 
 	/**
-	 * Density of the object in g/cm3.
+	 * Density of the body in g/cm3.
 	 * Calculated from the mass and volume.
 	 */
 	get density(): number {
@@ -97,7 +97,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Discovery date of the object.
+		 * Discovery date of the body.
 		 * @returns {SimpleCelestialBodyBuilder} The SimpleCelestialBodyBuilder
 		 */
 		discDate(discDate: Date): SimpleCelestialBodyBuilder {
@@ -121,7 +121,7 @@ namespace Builders {
 		#radius = 1000
 
 		/**
-		 * Name of the object.
+		 * Name of the body.
 		 * @returns {CelestialBodyBuilder} The CelestialBodyBuilder
 		 */
 		name(name: string): CelestialBodyBuilder {
@@ -130,7 +130,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Discovery date of the object.
+		 * Discovery date of the body.
 		 * @returns {CelestialBodyBuilder} The CelestialBodyBuilder
 		 */
 		discDate(discDate: Date): CelestialBodyBuilder {
@@ -139,7 +139,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Mass of the object in kilograms.
+		 * Mass of the body in kilograms.
 		 * @returns {CelestialBodyBuilder} The CelestialBodyBuilder
 		 */
 		mass(mass: number): CelestialBodyBuilder {
@@ -148,7 +148,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Radius of the object in kilometers.
+		 * Radius of the body in kilometers.
 		 * @returns {CelestialBodyBuilder} The CelestialBodyBuilder
 		 */
 		radius(radius: number): CelestialBodyBuilder {
@@ -157,7 +157,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Volume of the object in cubic kilometers, assuming a perfect sphere.
+		 * Volume of the body in cubic kilometers, assuming a perfect sphere.
 		 * If you know the radius, use radius() instead. Do not use both.
 		 * @returns {CelestialBodyBuilder} The CelestialBodyBuilder
 		 */

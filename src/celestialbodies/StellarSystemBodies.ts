@@ -23,14 +23,14 @@ class Star extends CelestialBody {
 	}
 
 	/**
-	 * The temperature of the object in kelvin.
+	 * The temperature of the body in kelvin.
 	 */
 	get temperature(): number {
 		return this.#temperature
 	}
 
 	/**
-	 * The luminosity of the object relative to the Sun.
+	 * The luminosity of the body relative to the Sun.
 	 */
 	get luminosity(): number {
 		return (
@@ -98,35 +98,35 @@ class Planet extends CelestialBody {
 	}
 
 	/**
-	 * Surface pressure of the object in bars.
+	 * Surface pressure of the body in bars.
 	 */
 	get surfacePressure(): number {
 		return this.#surfacePressure
 	}
 
 	/**
-	 * Greenhouse effect of the object in degrees celsius.
+	 * Greenhouse effect of the body in degrees celsius.
 	 */
 	get greenhouseEffect(): number {
 		return this.#greenhouseEffect
 	}
 
 	/**
-	 * Atmosphere composition of the object.
+	 * Atmosphere composition of the body.
 	 */
 	get atmosComp(): { gas: Gas; percentage: number }[] {
 		return this.#atmosComp
 	}
 
 	/**
-	 * The object's orbital parent.
+	 * The body's orbital parent.
 	 */
 	get parentBody(): SimpleCelestialBody {
 		return this.#parentBody
 	}
 
 	/**
-	 * Semi-major axis of the object in km.
+	 * Semi-major axis of the body in km.
 	 */
 	get semiMajorAxis(): number {
 		return this.#semiMajorAxis
@@ -156,7 +156,7 @@ namespace Builders {
 		#temperature = 2000
 
 		/**
-		 * Name of the object.
+		 * Name of the body.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
 		name(name: string): StarBuilder {
@@ -165,7 +165,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Discovery date of the object.
+		 * Discovery date of the body.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
 		discDate(discDate: Date): StarBuilder {
@@ -174,7 +174,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Mass of the object in kilograms.
+		 * Mass of the body in kilograms.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
 		mass(mass: number): StarBuilder {
@@ -183,7 +183,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Radius of the object in kilometers.
+		 * Radius of the body in kilometers.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
 		radius(radius: number): StarBuilder {
@@ -192,7 +192,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Volume of the object in cubic kilometers, assuming a perfect sphere.
+		 * Volume of the body in cubic kilometers, assuming a perfect sphere.
 		 * If you know the radius, use radius() instead. Do not use both.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
@@ -202,7 +202,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Temperature of the object in kelvin.
+		 * Temperature of the body in kelvin.
 		 * @returns {StarBuilder} The StarBuilder
 		 */
 		temperature(temperature: number): StarBuilder {
@@ -237,7 +237,7 @@ namespace Builders {
 		#semiMajorAxis = 1e5
 
 		/**
-		 * Name of the object.
+		 * Name of the body.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		name(name: string): PlanetBuilder {
@@ -246,7 +246,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Discovery date of the object.
+		 * Discovery date of the body.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		discDate(discDate: Date): PlanetBuilder {
@@ -255,7 +255,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Mass of the object in kilograms.
+		 * Mass of the body in kilograms.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		mass(mass: number): PlanetBuilder {
@@ -264,7 +264,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Radius of the object in kilometers.
+		 * Radius of the body in kilometers.
 		 * @returns {StarBuilder} The PlanetBuilder
 		 */
 		radius(radius: number): PlanetBuilder {
@@ -273,7 +273,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Volume of the object in cubic kilometers, assuming a perfect sphere.
+		 * Volume of the body in cubic kilometers, assuming a perfect sphere.
 		 * If you know the radius, use radius() instead. Do not use both.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
@@ -283,7 +283,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Surface pressure of the object in bars.
+		 * Surface pressure of the body in bars.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		surfacePressure(surfacePressure: number): PlanetBuilder {
@@ -292,7 +292,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Greenhouse effect of the object in bars.
+		 * Greenhouse effect of the body in bars.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		greenhouseEffect(greenhouseEffect: number): PlanetBuilder {
@@ -312,7 +312,7 @@ namespace Builders {
 		}
 
 		/**
-		 * The object's parent.
+		 * The body's orbital parent.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		parentBody(parentBody: SimpleCelestialBody): PlanetBuilder {
@@ -321,7 +321,7 @@ namespace Builders {
 		}
 
 		/**
-		 * Semi-major axis of the object in km.
+		 * Semi-major axis of the body in km.
 		 * @returns {PlanetBuilder} The PlanetBuilder
 		 */
 		semiMajorAxis(semiMajorAxis: number): PlanetBuilder {
