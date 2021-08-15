@@ -1,5 +1,5 @@
 /**
- * A painstakingly large list of valid gases or liquid vapours that an atmosphere can have.
+ * A painstakingly large list of valid gases or liquid vapours that a planet's atmosphere can contain.
  */
 enum Gas {
 	/* homonuclear gases */
